@@ -1,13 +1,17 @@
 import random
 
 r = random.randint(1, 100)
+count = 0
 while True:
-	number = input('請猜數字： ')
-	number = int(number)
-	if number == r:
-		print('你猜中了！')
-		break
-	elif number > r:
-		print('比答案大')
-	elif number < r:
-		print('比答案小')
+    count += 1 # count = count + 1
+    number = input('請猜數字： ')
+    number = int(number)
+    if number == r:
+        print('你猜中了！')
+        print('這是你猜的', count, '次')
+        break
+    elif number > r:
+        print('比答案大')
+    elif number < r:
+        print('比答案小')
+    print('這是你猜的', count, '次')
